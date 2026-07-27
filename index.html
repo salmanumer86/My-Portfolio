@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Salman Umer — Tech Recruiter & Business Development Specialist</title>
+<meta name="description" content="Salman Umer — Tech Recruiter & Business Development Specialist based in Lahore. Connecting companies with top software engineering talent and guiding developers toward the right opportunities. 12,000+ professional network."/>
+<meta name="author" content="Salman Umer"/>
+<meta property="og:title" content="Salman Umer — Tech Recruiter & Business Development Specialist"/>
+<meta property="og:description" content="Connecting companies with top software engineering talent. A recruiter who understands code."/>
+<meta property="og:type" content="profile"/>
+<meta name="theme-color" content="#0f1e3d"/>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230f1e3d'/%3E%3Ctext x='50' y='68' font-family='Georgia,serif' font-size='52' fill='%23c9a961' text-anchor='middle' font-weight='700'%3ESU%3C/text%3E%3C/svg%3E"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --navy:#0f1e3d;
+    --navy-2:#16294c;
+    --navy-deep:#0a1629;
+    --gold:#c9a961;
+    --gold-soft:#d9bd7f;
+    --cream:#f6f4ee;
+    --paper:#ffffff;
+    --ink:#16203a;
+    --muted:#aeb9cd;          /* light text on navy */
+    --muted-ink:#5c6678;      /* muted text on light */
+    --line-gold:rgba(201,169,97,.24);
+    --line-ink:rgba(22,32,58,.12);
+    --maxw:1180px;
+    --shadow:0 24px 60px -24px rgba(10,22,41,.35);
+  }
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--navy);color:var(--cream);
+    font-family:'Inter',system-ui,sans-serif;
+    font-size:16px;line-height:1.65;overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  ::selection{background:var(--gold);color:var(--navy)}
+  .serif{font-family:'Fraunces',Georgia,serif}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 40px}
+  @media(max-width:640px){.wrap{padding:0 22px}}
+  .eyebrow{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:600;display:inline-flex;align-items:center;gap:12px}
+  .eyebrow::before{content:'';width:30px;height:1px;background:var(--gold);display:inline-block}
+  .eyebrow.center::after{content:'';width:30px;height:1px;background:var(--gold);display:inline-block}
+
+  /* ---------- NAV ---------- */
+  .nav{position:sticky;top:0;z-index:60;background:rgba(15,30,61,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line-gold)}
+  .nav-inner{max-width:var(--maxw);margin:0 auto;padding:16px 40px;display:flex;align-items:center;justify-content:space-between}
+  @media(max-width:640px){.nav-inner{padding:14px 22px}}
+  .brand{display:flex;align-items:center;gap:12px;font-family:'Fraunces',serif;font-weight:600;font-size:19px;letter-spacing:.3px}
+  .brand .mono{width:38px;height:38px;border:1px solid var(--gold);border-radius:9px;display:grid;place-items:center;color:var(--gold);font-size:15px;font-weight:700;flex:none}
+  .brand b{color:var(--gold);font-weight:600}
+  .nav ul{display:flex;list-style:none;gap:30px;font-size:14px;font-weight:500}
+  .nav ul a{color:var(--muted);transition:color .2s;position:relative;padding:4px 0}
+  .nav ul a::after{content:'';position:absolute;left:0;bottom:-2px;width:0;height:1px;background:var(--gold);transition:width .25s}
+  .nav ul a:hover{color:var(--cream)}
+  .nav ul a:hover::after{width:100%}
+  .nav .cta{background:var(--gold);color:var(--navy);padding:10px 18px;border-radius:7px;font-size:13px;font-weight:600;transition:transform .2s,box-shadow .2s;letter-spacing:.2px}
+  .nav .cta:hover{transform:translateY(-2px);box-shadow:0 10px 24px -8px rgba(201,169,97,.6)}
+  @media(max-width:860px){.nav ul{display:none}}
+
+  /* ---------- HERO ---------- */
+  .hero{position:relative;overflow:hidden;padding:96px 0 88px}
+  .hero::before{content:'';position:absolute;inset:0;background:
+    radial-gradient(720px 420px at 78% 12%,rgba(201,169,97,.14),transparent 60%),
+    radial-gradient(640px 480px at 8% 88%,rgba(46,74,128,.4),transparent 62%);
+    pointer-events:none}
+  .hero-grid{position:relative;display:grid;grid-template-columns:1.35fr .9fr;gap:64px;align-items:center}
+  @media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:48px}.hero{padding:64px 0 64px}}
+  h1.hero-title{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(40px,6vw,68px);line-height:1.04;letter-spacing:-1px;margin:26px 0 22px}
+  h1.hero-title .gold{color:var(--gold);font-style:italic;font-weight:500}
+  .hero-sub{font-size:18px;color:var(--muted);max-width:540px;line-height:1.7}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:15px;padding:15px 26px;border-radius:9px;transition:transform .2s,box-shadow .2s,background .2s,color .2s}
+  .btn-gold{background:var(--gold);color:var(--navy)}
+  .btn-gold:hover{transform:translateY(-3px);box-shadow:0 16px 30px -10px rgba(201,169,97,.55)}
+  .btn-ghost{border:1px solid var(--line-gold);color:var(--cream)}
+  .btn-ghost:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-3px)}
+  .hero-loc{margin-top:30px;font-size:13px;color:var(--muted);display:flex;align-items:center;gap:9px}
+  .hero-loc .dot{width:8px;height:8px;border-radius:50%;background:#4ade80;box-shadow:0 0 0 4px rgba(74,222,128,.18)}
+
+  /* portrait medallion */
+  .portrait{position:relative;justify-self:center}
+  .portrait .frame{width:300px;height:300px;border-radius:50%;position:relative;display:grid;place-items:center;
+    background:linear-gradient(160deg,var(--navy-2),var(--navy-deep));
+    border:1px solid var(--line-gold);box-shadow:var(--shadow),inset 0 0 60px rgba(201,169,97,.06)}
+  .portrait .frame::before{content:'';position:absolute;inset:-9px;border-radius:50%;border:1px solid var(--gold);opacity:.35}
+  .portrait .mono-lg{font-family:'Fraunces',serif;font-size:96px;font-weight:600;color:var(--gold);line-height:1}
+  /* If a real photo is added, replace .mono-lg with: <img class="photo" src="headshot.jpg" alt="Salman Umer"/> */
+  .portrait .photo{width:300px;height:300px;border-radius:50%;object-fit:cover;border:1px solid var(--line-gold);box-shadow:var(--shadow)}
+  .portrait .badge{position:absolute;bottom:8px;right:-6px;background:var(--gold);color:var(--navy);font-size:12px;font-weight:700;padding:9px 16px;border-radius:30px;letter-spacing:.3px;box-shadow:0 12px 24px -10px rgba(0,0,0,.5)}
+  @media(max-width:900px){.portrait{order:-1}.portrait .frame,.portrait .photo{width:220px;height:220px}.portrait .mono-lg{font-size:72px}}
+
+  /* stats strip */
+  .stats{border-top:1px solid var(--line-gold);border-bottom:1px solid var(--line-gold);background:rgba(10,22,41,.35)}
+  .stats-inner{max-width:var(--maxw);margin:0 auto;padding:0 40px;display:grid;grid-template-columns:repeat(4,1fr)}
+  @media(max-width:640px){.stats-inner{grid-template-columns:repeat(2,1fr);padding:0 22px}}
+  .stat{padding:30px 8px;text-align:center;border-left:1px solid var(--line-gold)}
+  .stat:first-child{border-left:none}
+  @media(max-width:640px){.stat:nth-child(3){border-left:none}.stat:nth-child(odd){border-left:none}.stat{padding:24px 8px}}
+  .stat b{font-family:'Fraunces',serif;font-size:38px;font-weight:600;color:var(--gold);display:block;line-height:1}
+  .stat span{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-top:8px;display:block}
+
+  /* ---------- LIGHT SECTIONS ---------- */
+  .light{background:var(--cream);color:var(--ink)}
+  .light .eyebrow{color:#9a7b32}
+  .light .eyebrow::before,.light .eyebrow.center::after{background:#b48f3d}
+  .section{padding:104px 0}
+  @media(max-width:640px){.section{padding:68px 0}}
+  .sec-head{max-width:620px;margin-bottom:56px}
+  .sec-head.center{margin:0 auto 56px;text-align:center}
+  h2.sec-title{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(32px,4.4vw,48px);line-height:1.1;letter-spacing:-.5px;margin:20px 0 16px}
+  .sec-head p{font-size:17px;color:var(--muted-ink);line-height:1.7}
+  .light h2.sec-title{color:var(--ink)}
+  .light .em{color:#9a7b32;font-style:italic;font-family:'Fraunces',serif}
+
+  /* about */
+  .about-grid{display:grid;grid-template-columns:1.4fr .8fr;gap:64px;align-items:start}
+  @media(max-width:860px){.about-grid{grid-template-columns:1fr;gap:40px}}
+  .about-body p{font-size:18px;line-height:1.8;color:#2c3654;margin-bottom:20px}
+  .about-body p strong{color:var(--ink);font-weight:600}
+  .about-card{background:var(--navy);color:var(--cream);border-radius:16px;padding:34px;box-shadow:var(--shadow);border:1px solid var(--line-gold)}
+  .about-card h3{font-family:'Fraunces',serif;font-size:20px;font-weight:600;color:var(--gold);margin-bottom:20px}
+  .about-card .row{display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-top:1px solid var(--line-gold);font-size:14px}
+  .about-card .row:first-of-type{border-top:none}
+  .about-card .row span{color:var(--muted)}
+  .about-card .row b{font-weight:600;text-align:right}
+  .about-card .row b .live{color:#4ade80}
+
+  /* services */
+  .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  @media(max-width:900px){.svc-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:560px){.svc-grid{grid-template-columns:1fr}}
+  .svc{background:var(--paper);border:1px solid var(--line-ink);border-radius:14px;padding:32px 28px;transition:transform .25s,box-shadow .25s,border-color .25s}
+  .svc:hover{transform:translateY(-6px);box-shadow:0 26px 50px -26px rgba(16,32,61,.4);border-color:var(--gold)}
+  .svc .ic{width:48px;height:48px;border-radius:11px;background:var(--navy);color:var(--gold);display:grid;place-items:center;font-size:22px;margin-bottom:20px}
+  .svc h3{font-family:'Fraunces',serif;font-size:20px;font-weight:600;color:var(--ink);margin-bottom:10px;line-height:1.25}
+  .svc p{font-size:15px;color:var(--muted-ink);line-height:1.65}
+  .svc .no{font-size:12px;font-weight:700;color:var(--gold);letter-spacing:2px;float:right}
+
+  /* ---------- CODES DIFFERENTIATOR (navy) ---------- */
+  .codes{position:relative;overflow:hidden}
+  .codes::before{content:'';position:absolute;inset:0;background:radial-gradient(600px 400px at 85% 20%,rgba(201,169,97,.12),transparent 60%);pointer-events:none}
+  .codes-grid{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+  @media(max-width:860px){.codes-grid{grid-template-columns:1fr;gap:40px}}
+  .codes p.lead{font-size:18px;color:var(--muted);line-height:1.8;margin-bottom:22px}
+  .skillset{display:flex;flex-direction:column;gap:26px}
+  .skillset .group h4{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+  .chips{display:flex;flex-wrap:wrap;gap:10px}
+  .chip{background:rgba(255,255,255,.04);border:1px solid var(--line-gold);color:var(--cream);font-size:14px;font-weight:500;padding:9px 16px;border-radius:30px;transition:background .2s,border-color .2s,transform .2s}
+  .chip:hover{background:rgba(201,169,97,.14);border-color:var(--gold);transform:translateY(-2px)}
+  .code-window{background:var(--navy-deep);border:1px solid var(--line-gold);border-radius:14px;overflow:hidden;box-shadow:var(--shadow);font-family:ui-monospace,'SF Mono',Menlo,monospace}
+  .code-window .bar{display:flex;align-items:center;gap:7px;padding:14px 16px;border-bottom:1px solid var(--line-gold)}
+  .code-window .bar i{width:11px;height:11px;border-radius:50%;display:inline-block}
+  .code-window .bar i:nth-child(1){background:#ff5f57}.code-window .bar i:nth-child(2){background:#febc2e}.code-window .bar i:nth-child(3){background:#28c840}
+  .code-window .bar span{margin-left:8px;font-size:12px;color:var(--muted)}
+  .code-window pre{padding:22px;font-size:13.5px;line-height:1.9;color:#cdd6e6;overflow-x:auto}
+  .code-window .k{color:var(--gold)}.code-window .s{color:#7fd1a6}.code-window .c{color:#5c6b8a}.code-window .p{color:#8fb0e6}
+
+  /* ---------- EXPERIENCE ---------- */
+  .timeline{position:relative;max-width:840px}
+  .tl-item{position:relative;padding:0 0 40px 40px;border-left:1px solid var(--line-ink)}
+  .tl-item:last-child{padding-bottom:0}
+  .tl-item::before{content:'';position:absolute;left:-6.5px;top:4px;width:12px;height:12px;border-radius:50%;background:var(--cream);border:2px solid var(--gold)}
+  .tl-item.now::before{background:var(--gold);box-shadow:0 0 0 5px rgba(201,169,97,.2)}
+  .tl-date{font-size:13px;font-weight:600;letter-spacing:.5px;color:#9a7b32;margin-bottom:6px}
+  .tl-item h3{font-family:'Fraunces',serif;font-size:21px;font-weight:600;color:var(--ink);line-height:1.25}
+  .tl-item h3 .co{color:var(--muted-ink);font-weight:400;font-family:'Inter',sans-serif;font-size:16px}
+  .tl-item p{font-size:15px;color:var(--muted-ink);margin-top:8px;line-height:1.65;max-width:640px}
+  .tl-tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold);background:var(--navy);padding:3px 10px;border-radius:20px;margin-left:8px;vertical-align:middle}
+
+  /* ---------- LANGUAGES + EDU (navy) ---------- */
+  .le-grid{display:grid;grid-template-columns:1.3fr .9fr;gap:56px}
+  @media(max-width:860px){.le-grid{grid-template-columns:1fr;gap:44px}}
+  .lang-row{display:flex;align-items:center;gap:18px;padding:16px 0;border-top:1px solid var(--line-gold)}
+  .lang-row:first-of-type{border-top:none}
+  .lang-row .name{width:110px;flex:none;font-weight:500;font-size:15px}
+  .lang-row .meter{flex:1;height:6px;border-radius:20px;background:rgba(255,255,255,.06);overflow:hidden}
+  .lang-row .meter i{display:block;height:100%;border-radius:20px;background:linear-gradient(90deg,var(--gold),var(--gold-soft));width:0;transition:width 1.1s cubic-bezier(.2,.7,.2,1)}
+  .lang-row .lvl{width:150px;flex:none;text-align:right;font-size:12.5px;color:var(--muted)}
+  @media(max-width:520px){.lang-row .lvl{display:none}}
+  .edu-card{background:rgba(255,255,255,.03);border:1px solid var(--line-gold);border-radius:14px;padding:30px}
+  .edu-card .ic{font-size:26px;color:var(--gold);margin-bottom:14px}
+  .edu-card h3{font-family:'Fraunces',serif;font-size:20px;font-weight:600;margin-bottom:6px}
+  .edu-card .deg{color:var(--gold);font-size:15px;margin-bottom:4px}
+  .edu-card .yr{color:var(--muted);font-size:13px}
+
+  /* ---------- CONTACT ---------- */
+  .contact{background:var(--navy-deep);position:relative;overflow:hidden;text-align:center;padding:110px 0}
+  .contact::before{content:'';position:absolute;inset:0;background:radial-gradient(700px 400px at 50% 0%,rgba(201,169,97,.16),transparent 60%);pointer-events:none}
+  @media(max-width:640px){.contact{padding:74px 0}}
+  .contact .inner{position:relative;max-width:680px;margin:0 auto;padding:0 22px}
+  .contact h2{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(36px,6vw,60px);line-height:1.08;letter-spacing:-1px;margin:22px 0 18px}
+  .contact h2 .gold{color:var(--gold);font-style:italic}
+  .contact p{font-size:18px;color:var(--muted);max-width:520px;margin:0 auto 38px;line-height:1.7}
+  .contact .email{display:inline-flex;align-items:center;gap:11px;background:var(--gold);color:var(--navy);font-weight:700;font-size:18px;padding:18px 34px;border-radius:11px;transition:transform .2s,box-shadow .2s}
+  .contact .email:hover{transform:translateY(-3px);box-shadow:0 18px 38px -12px rgba(201,169,97,.55)}
+  .socials{display:flex;justify-content:center;flex-wrap:wrap;gap:14px;margin-top:34px}
+  .socials a{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border:1px solid var(--line-gold);border-radius:9px;font-size:14px;font-weight:500;color:var(--cream);transition:border-color .2s,color .2s,transform .2s}
+  .socials a:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px)}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--navy-deep);border-top:1px solid var(--line-gold);padding:26px 0}
+  .foot-inner{max-width:var(--maxw);margin:0 auto;padding:0 40px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--muted)}
+  @media(max-width:640px){.foot-inner{padding:0 22px;justify-content:center;text-align:center}}
+  footer b{color:var(--gold);font-weight:600}
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+  .reveal.in{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body id="top">
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#top" class="brand"><span class="mono">SU</span>Salman <b>Umer</b></a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#approach">Why me</a></li>
+      <li><a href="#experience">Experience</a></li>
+    </ul>
+    <a href="#contact" class="cta">Let's talk hiring →</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Tech Recruiter · Business Development</span>
+      <h1 class="hero-title">Connecting companies with the <span class="gold">right</span> engineering talent.</h1>
+      <p class="hero-sub">I help startups and growing companies hire skilled software engineers faster — and I guide developers toward the roles where they'll do their best work. A recruiter who actually understands code.</p>
+      <div class="hero-cta">
+        <a class="btn btn-gold" href="#contact">Let's talk hiring →</a>
+        <a class="btn btn-ghost" href="#services">View what I do</a>
+      </div>
+      <div class="hero-loc"><span class="dot"></span> Based in Lahore, Pakistan · Open to collaborations worldwide</div>
+    </div>
+    <div class="portrait">
+      <div class="frame">
+        <!-- Swap this monogram for a photo: <img class="photo" src="headshot.jpg" alt="Salman Umer"/> -->
+        <span class="mono-lg">SU</span>
+      </div>
+      <span class="badge">12K+ network</span>
+    </div>
+  </div>
+</header>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stats-inner">
+    <div class="stat"><b>12K+</b><span>Professional network</span></div>
+    <div class="stat"><b>Dual</b><span>Recruiter + developer</span></div>
+    <div class="stat"><b>5</b><span>Languages spoken</span></div>
+    <div class="stat"><b>Jazzari</b><span>Business development</span></div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="section light" id="about">
+  <div class="wrap about-grid reveal">
+    <div>
+      <span class="eyebrow">About</span>
+      <h2 class="sec-title">Hiring is about people <span class="em">and</span> product. I understand both.</h2>
+      <div class="about-body">
+        <p>I help startups and growing companies hire the right tech talent faster — and I guide developers toward the opportunities where they'll thrive. With experience across both <strong>technical and non-technical recruitment</strong>, I know what companies actually need and what separates a strong candidate from an average one.</p>
+        <p>As a frontend developer myself — <strong>React.js, Next.js, React Native, Firebase</strong> — I evaluate candidates beyond the résumé. I understand real-world project requirements, code quality, and scalability, so the shortlists I build hold up in the interview room.</p>
+        <p>At <strong>Jazzari</strong>, I focus on business development and building lasting hiring partnerships between companies and skilled developers.</p>
+      </div>
+    </div>
+    <aside class="about-card">
+      <h3>At a glance</h3>
+      <div class="row"><span>Role</span><b>Tech Recruiter &amp; BD Specialist</b></div>
+      <div class="row"><span>Company</span><b>Jazzari</b></div>
+      <div class="row"><span>Based in</span><b>Lahore, Pakistan</b></div>
+      <div class="row"><span>Network</span><b>12,000+ connections</b></div>
+      <div class="row"><span>Also</span><b>Frontend Developer</b></div>
+      <div class="row"><span>Status</span><b><span class="live">●</span> Open to collaborations</b></div>
+    </aside>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section light" id="services" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow center">What I help with</span>
+      <h2 class="sec-title">Recruiting, business development &amp; career guidance</h2>
+      <p>End-to-end support for the two sides of tech hiring — the companies who need talent, and the developers looking for their next move.</p>
+    </div>
+    <div class="svc-grid reveal">
+      <div class="svc"><span class="no">01</span><div class="ic">◎</div><h3>Tech Talent Sourcing &amp; Screening</h3><p>Finding, vetting, and shortlisting software engineers who match your stack, seniority, and team culture — not just keywords on a résumé.</p></div>
+      <div class="svc"><span class="no">02</span><div class="ic">&lt;/&gt;</div><h3>Hiring Frontend &amp; Full-Stack Developers</h3><p>Specialist support for hiring React, Next.js, and React Native talent. I speak the language, so I filter signal from noise before you spend interview time.</p></div>
+      <div class="svc"><span class="no">03</span><div class="ic">✎</div><h3>Résumé / CV Review &amp; Optimization</h3><p>Sharpening developer résumés so they clear the screening bar — clear impact, the right keywords, and a story that recruiters and hiring managers act on.</p></div>
+      <div class="svc"><span class="no">04</span><div class="ic">in</div><h3>LinkedIn Profile Improvement</h3><p>Positioning developers to be found and taken seriously — headline, summary, and experience that turn profile views into real conversations.</p></div>
+      <div class="svc"><span class="no">05</span><div class="ic">➜</div><h3>Job-Search Guidance for Developers</h3><p>Practical coaching for engineers navigating the market — where to apply, how to interview, and how to evaluate an offer that's actually right for you.</p></div>
+      <div class="svc"><span class="no">06</span><div class="ic">⇄</div><h3>Hiring Partnerships &amp; Outsourcing</h3><p>Building long-term partnerships between companies and skilled development teams — a reliable talent pipeline instead of one-off, transactional hires.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY ME / RECRUITER WHO CODES -->
+<section class="section codes" id="approach">
+  <div class="wrap codes-grid reveal">
+    <div>
+      <span class="eyebrow">Why work with me</span>
+      <h2 class="sec-title" style="color:var(--cream)">A recruiter who has actually shipped code.</h2>
+      <p class="lead">Most tech recruiters screen on keywords. I've built with the tools your team uses — so I can tell the difference between someone who lists React and someone who can carry a feature to production.</p>
+      <div class="skillset">
+        <div class="group">
+          <h4>Development</h4>
+          <div class="chips"><span class="chip">React.js</span><span class="chip">Next.js</span><span class="chip">React Native</span><span class="chip">Firebase</span><span class="chip">JavaScript</span></div>
+        </div>
+        <div class="group">
+          <h4>Recruiting &amp; Business Development</h4>
+          <div class="chips"><span class="chip">Talent Sourcing</span><span class="chip">Technical Screening</span><span class="chip">Negotiation</span><span class="chip">Interpersonal Communication</span><span class="chip">Partnership Building</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="code-window" aria-hidden="true">
+      <div class="bar"><i></i><i></i><i></i><span>shortlist.js</span></div>
+<pre><span class="k">const</span> candidate = {
+  role: <span class="s">"Frontend Engineer"</span>,
+  stack: [<span class="s">"React"</span>, <span class="s">"Next.js"</span>, <span class="s">"TypeScript"</span>],
+  screenedBy: <span class="s">"Salman Umer"</span>,
+};
+
+<span class="c">// I read the code, not just the CV</span>
+<span class="k">function</span> <span class="p">isRightFit</span>(c, team) {
+  <span class="k">return</span> c.stack.matches(team.needs)
+    &amp;&amp; c.quality === <span class="s">"production-ready"</span>
+    &amp;&amp; c.culture.aligns(team);
+}
+
+<span class="p">shortlist</span>(candidate); <span class="c">// ✓ ready to interview</span></pre>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="section light" id="experience">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Career</span>
+      <h2 class="sec-title">Two decades across tech, operations &amp; recruitment</h2>
+      <p>From database administration to operations leadership to tech recruiting — a path that gives me a rare, well-rounded read on both people and process.</p>
+    </div>
+    <div class="timeline reveal">
+      <div class="tl-item now">
+        <div class="tl-date">Dec 2023 — Present</div>
+        <h3>Business Development Executive <span class="co">· Jazzari</span> <span class="tl-tag">Current</span></h3>
+        <p>Driving business development and building hiring partnerships that connect companies with skilled software engineers. Sourcing, screening, and closing — with a focus on long-term, outsourcing-style relationships.</p>
+      </div>
+      <div class="tl-item now">
+        <div class="tl-date">Sep 2023 — Present</div>
+        <h3>Junior Frontend Engineer <span class="co">· Jazzari</span> <span class="tl-tag">Current</span></h3>
+        <p>Building user interfaces with React.js, Next.js, and React Native on Firebase — hands-on work that keeps my technical judgement sharp and grounds my recruiting in real engineering.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Oct 2016 — Nov 2018</div>
+        <h3>Assistant General Manager, Operations <span class="co">· Duraflow Plastics Pvt Ltd</span></h3>
+        <p>Led day-to-day operations and team coordination for a manufacturing operation in Lahore.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Nov 2014 — Dec 2015</div>
+        <h3>Assistant General Manager <span class="co">· Alif Industry SMC (TURKPLAST)</span></h3>
+        <p>Managed operations and business functions for an industrial manufacturer in Lahore.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Mar 2012 — Apr 2014</div>
+        <h3>Back Office Assistant <span class="co">· Al Masraf</span></h3>
+        <p>Supported back-office banking operations in Dubai, United Arab Emirates.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Mar 2003 — Oct 2007</div>
+        <h3>Database Administrator <span class="co">· DESCON</span></h3>
+        <p>Administered and maintained database systems for a leading engineering group in Lahore — where my technical career began.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LANGUAGES + EDUCATION -->
+<section class="section" id="languages">
+  <div class="wrap le-grid reveal">
+    <div>
+      <span class="eyebrow">Languages</span>
+      <h2 class="sec-title" style="color:var(--cream)">Fluent across five languages</h2>
+      <div class="langs" style="margin-top:26px">
+        <div class="lang-row"><span class="name">Urdu</span><span class="meter"><i data-w="100%"></i></span><span class="lvl">Native / Bilingual</span></div>
+        <div class="lang-row"><span class="name">Punjabi</span><span class="meter"><i data-w="92%"></i></span><span class="lvl">Full Professional</span></div>
+        <div class="lang-row"><span class="name">English</span><span class="meter"><i data-w="85%"></i></span><span class="lvl">Professional Working</span></div>
+        <div class="lang-row"><span class="name">Arabic</span><span class="meter"><i data-w="40%"></i></span><span class="lvl">Limited Working</span></div>
+        <div class="lang-row"><span class="name">Azerbaijani</span><span class="meter"><i data-w="35%"></i></span><span class="lvl">Limited Working</span></div>
+      </div>
+    </div>
+    <div>
+      <span class="eyebrow">Education</span>
+      <div class="edu-card" style="margin-top:26px">
+        <div class="ic">🎓</div>
+        <h3>University of the Punjab, Lahore</h3>
+        <div class="deg">Bachelor's Degree, Sociology</div>
+        <div class="yr">Aug 2014 — Jul 2016</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="inner reveal">
+    <span class="eyebrow center">Get in touch</span>
+    <h2>Let's connect the <span class="gold">right</span> people.</h2>
+    <p>Hiring software engineers, looking for tech talent support, or a developer seeking your next opportunity? I'd love to talk.</p>
+    <a class="email" href="mailto:salmanumer.dev@gmail.com">salmanumer.dev@gmail.com →</a>
+    <div class="socials">
+      <a href="https://www.linkedin.com/in/salmanumer" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a href="tel:+923010147927">+92 301 0147 927 ↗</a>
+      <a href="mailto:salmanumer.dev@gmail.com">Email ↗</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-inner">
+    <div>© <span id="yr">2026</span> <b>Salman Umer</b> · Tech Recruiter &amp; Business Development Specialist</div>
+    <div>Lahore, Pakistan</div>
+  </div>
+</footer>
+
+<script>
+  // reveal on scroll
+  const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');
+    // animate language meters when revealed
+    e.target.querySelectorAll('.meter i').forEach(bar=>{bar.style.width=bar.getAttribute('data-w')});
+    io.unobserve(e.target)}})},{threshold:.14});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  // current year
+  document.getElementById('yr').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
