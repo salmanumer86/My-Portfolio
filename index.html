@@ -257,16 +257,39 @@
   .contact .eyebrow::before,.contact .eyebrow.center::after{background:var(--gold)}
   .contact::before{content:'';position:absolute;inset:0;background:radial-gradient(700px 400px at 50% 0%,rgba(201,169,97,.16),transparent 60%);pointer-events:none}
   @media(max-width:640px){.contact{padding:74px 0}}
-  .contact .inner{position:relative;max-width:680px;margin:0 auto;padding:0 22px}
-  .contact h2{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(36px,6vw,60px);line-height:1.08;letter-spacing:-1px;margin:22px 0 18px}
   .contact h2 .gold{color:var(--gold);font-style:italic}
-  .contact p{font-size:18px;color:var(--muted);max-width:520px;margin:0 auto 38px;line-height:1.7}
-  .contact .email{display:inline-flex;align-items:center;gap:11px;background:var(--gold);color:var(--navy);font-weight:700;font-size:18px;padding:18px 34px;border-radius:11px;transition:transform .2s,box-shadow .2s}
-  .contact .email:hover{transform:translateY(-3px);box-shadow:0 18px 38px -12px rgba(201,169,97,.55)}
-  .socials{display:flex;justify-content:center;flex-wrap:wrap;gap:14px;margin-top:34px}
-  .socials a{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border:1px solid var(--line-gold);border-radius:9px;font-size:14px;font-weight:500;color:var(--cream);transition:border-color .2s,color .2s,transform .2s}
-  .socials a:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px)}
   .ic-svg{width:18px;height:18px;fill:currentColor;flex:none;display:inline-block}
+  /* two-column contact */
+  .contact-grid{position:relative;max-width:var(--maxw);margin:0 auto;padding:0 40px;display:grid;grid-template-columns:1fr 1.08fr;gap:56px;align-items:start;text-align:left}
+  @media(max-width:860px){.contact-grid{grid-template-columns:1fr;gap:44px}}
+  @media(max-width:640px){.contact-grid{padding:0 22px}}
+  .contact-left h2{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(30px,4.4vw,46px);line-height:1.08;letter-spacing:-1px;margin:20px 0 16px;color:var(--cream)}
+  .contact-left p{font-size:17px;color:var(--muted);line-height:1.7;max-width:440px}
+  .contact-methods{display:flex;flex-direction:column;gap:12px;margin-top:30px}
+  .cmethod{display:flex;align-items:center;gap:14px;color:var(--cream);padding:8px 0;transition:transform .2s}
+  .cmethod .ic{width:46px;height:46px;flex:none;border-radius:12px;background:rgba(255,255,255,.05);border:1px solid var(--line-gold);display:grid;place-items:center;color:var(--gold);transition:border-color .2s,background .2s}
+  .cmethod .txt small{display:block;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:2px}
+  .cmethod .txt span{font-size:15px;font-weight:600}
+  a.cmethod:hover{transform:translateX(4px)}
+  a.cmethod:hover .ic{border-color:var(--gold);background:rgba(201,169,97,.14)}
+  /* form card */
+  .contact-form{background:rgba(255,255,255,.045);border:1px solid var(--line-gold);border-radius:18px;padding:32px;box-shadow:var(--shadow)}
+  @media(max-width:640px){.contact-form{padding:24px}}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media(max-width:520px){.form-row{grid-template-columns:1fr}}
+  .field{margin-bottom:18px}
+  .field label{display:block;font-size:12px;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);margin-bottom:8px;font-weight:600}
+  .field label .opt{text-transform:none;letter-spacing:0;color:#7d879b;font-weight:500}
+  .field input,.field textarea{width:100%;background:rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.12);border-radius:11px;padding:13px 15px;color:var(--cream);font:inherit;font-size:15px;transition:border-color .2s,box-shadow .2s,background .2s}
+  .field input::placeholder,.field textarea::placeholder{color:#7d879b}
+  .field input:focus,.field textarea:focus{outline:none;border-color:var(--gold);background:rgba(0,0,0,.32);box-shadow:0 0 0 3px rgba(201,169,97,.18)}
+  .field textarea{resize:vertical;min-height:132px;line-height:1.6}
+  .contact-form .submit{width:100%;justify-content:center;margin-top:4px;cursor:pointer;border:none;font:inherit;font-size:15px}
+  .hpot{position:absolute!important;left:-9999px;width:1px;height:1px;overflow:hidden;opacity:0}
+  .form-note{margin-top:16px;font-size:14px;line-height:1.5;border-radius:11px;padding:12px 15px;display:none}
+  .form-note.show{display:block}
+  .form-note.ok{background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.4);color:#c3f0d1}
+  .form-note.err{background:rgba(239,68,68,.12);border:1px solid rgba(239,68,68,.4);color:#f6c9c9}
 
   /* ---------- FOOTER ---------- */
   footer{background:var(--navy-deep);border-top:1px solid var(--line-gold);padding:26px 0}
@@ -396,6 +419,7 @@
   <symbol id="i-gmail" viewBox="0 0 24 24"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 010 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></symbol>
   <symbol id="i-sun" viewBox="0 0 24 24"><path d="M12 17a5 5 0 100-10 5 5 0 000 10zm0-13a1 1 0 011 1v1a1 1 0 11-2 0V5a1 1 0 011-1zm0 15a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM4 12a1 1 0 01-1 1H2a1 1 0 110-2h1a1 1 0 011 1zm18 0a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM5.64 5.64a1 1 0 011.42 0l.7.7a1 1 0 11-1.41 1.42l-.71-.7a1 1 0 010-1.42zm11.9 11.9a1 1 0 011.42 0l.7.7a1 1 0 01-1.41 1.42l-.71-.7a1 1 0 010-1.42zm1.42-11.9a1 1 0 010 1.42l-.7.7a1 1 0 11-1.42-1.41l.71-.71a1 1 0 011.41 0zM7.05 17.54a1 1 0 010 1.42l-.7.7a1 1 0 01-1.42-1.41l.71-.71a1 1 0 011.41 0z"/></symbol>
   <symbol id="i-moon" viewBox="0 0 24 24"><path d="M21.64 13a1 1 0 00-1.05-.14 8 8 0 01-3.37.73 8.15 8.15 0 01-8.14-8.1 8 8 0 01.74-3.37A1 1 0 009 .73 10.14 10.14 0 1023.27 15a1 1 0 00-.63-2z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 2a7 7 0 00-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 00-7-7zm0 9.5A2.5 2.5 0 1112 6.5a2.5 2.5 0 010 5z"/></symbol>
 </svg>
 
 <!-- NAV -->
@@ -604,16 +628,56 @@
 
 <!-- CONTACT -->
 <section class="contact" id="contact">
-  <div class="inner reveal">
-    <span class="eyebrow center">Get in touch</span>
-    <h2>Let's connect the <span class="gold">right</span> people.</h2>
-    <p>Hiring software engineers, looking for tech talent support, or a developer seeking your next opportunity? I'd love to talk.</p>
-    <a class="email" href="mailto:salmanumer.dev@gmail.com">salmanumer.dev@gmail.com →</a>
-    <div class="socials">
-      <a href="https://www.linkedin.com/in/salmanumer" target="_blank" rel="noopener"><svg class="ic-svg"><use href="#i-linkedin"/></svg>LinkedIn</a>
-      <a href="https://wa.me/923010147927" target="_blank" rel="noopener"><svg class="ic-svg"><use href="#i-whatsapp"/></svg>WhatsApp</a>
-      <a href="mailto:salmanumer.dev@gmail.com"><svg class="ic-svg"><use href="#i-gmail"/></svg>Email</a>
+  <div class="contact-grid reveal">
+    <div class="contact-left">
+      <span class="eyebrow">Get in touch</span>
+      <h2>Let's connect the <span class="gold">right</span> people.</h2>
+      <p>Hiring software engineers, looking for tech talent support, or a developer seeking your next opportunity? Send a message and I'll get back to you.</p>
+      <div class="contact-methods">
+        <a class="cmethod" href="mailto:salmanumer.dev@gmail.com">
+          <span class="ic"><svg class="ic-svg"><use href="#i-gmail"/></svg></span>
+          <span class="txt"><small>Email</small><span>salmanumer.dev@gmail.com</span></span>
+        </a>
+        <a class="cmethod" href="https://wa.me/923010147927" target="_blank" rel="noopener">
+          <span class="ic"><svg class="ic-svg"><use href="#i-whatsapp"/></svg></span>
+          <span class="txt"><small>WhatsApp</small><span>+92 301 0147 927</span></span>
+        </a>
+        <a class="cmethod" href="https://www.linkedin.com/in/salmanumer" target="_blank" rel="noopener">
+          <span class="ic"><svg class="ic-svg"><use href="#i-linkedin"/></svg></span>
+          <span class="txt"><small>LinkedIn</small><span>/in/salmanumer</span></span>
+        </a>
+        <div class="cmethod as-static">
+          <span class="ic"><svg class="ic-svg"><use href="#i-pin"/></svg></span>
+          <span class="txt"><small>Location</small><span>Lahore, Pakistan</span></span>
+        </div>
+      </div>
     </div>
+
+    <!-- To receive messages: create a form endpoint (Formspree / Web3Forms),
+         then paste the URL into data-endpoint below. Until then, submits open the visitor's email app. -->
+    <form class="contact-form" id="contactForm" data-endpoint="" novalidate>
+      <div class="form-row">
+        <div class="field">
+          <label for="cf_name">Your name</label>
+          <input type="text" id="cf_name" name="name" placeholder="Jane Doe" autocomplete="name" required/>
+        </div>
+        <div class="field">
+          <label for="cf_email">Email</label>
+          <input type="email" id="cf_email" name="email" placeholder="jane@company.com" autocomplete="email" required/>
+        </div>
+      </div>
+      <div class="field">
+        <label for="cf_subject">Company / subject <span class="opt">(optional)</span></label>
+        <input type="text" id="cf_subject" name="subject" placeholder="Hiring React developers"/>
+      </div>
+      <div class="field">
+        <label for="cf_message">Message</label>
+        <textarea id="cf_message" name="message" placeholder="Tell me what you're looking for…" required></textarea>
+      </div>
+      <input type="text" class="hpot" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true"/>
+      <button type="submit" class="btn btn-gold submit">Send message →</button>
+      <div class="form-note" id="formNote" role="status" aria-live="polite"></div>
+    </form>
   </div>
 </section>
 
@@ -686,6 +750,39 @@
     if(link && e.isIntersecting){navLinks.forEach(a=>a.classList.remove('active'));link.classList.add('active');}
   })},{rootMargin:'-45% 0px -50% 0px'});
   ['about','services','approach','experience'].forEach(id=>{const s=document.getElementById(id);if(s)spy.observe(s);});
+
+  // contact form
+  const cform=document.getElementById('contactForm');
+  if(cform){
+    const note=document.getElementById('formNote');
+    const showNote=(type,msg)=>{note.className='form-note show '+type;note.textContent=msg;};
+    cform.addEventListener('submit',e=>{
+      e.preventDefault();
+      if(cform.querySelector('[name="_gotcha"]').value) return; // spam bot
+      const name=document.getElementById('cf_name').value.trim();
+      const email=document.getElementById('cf_email').value.trim();
+      const message=document.getElementById('cf_message').value.trim();
+      const subject=document.getElementById('cf_subject').value.trim();
+      if(!name||!email||!message){showNote('err','Please fill in your name, email, and message.');return;}
+      if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){showNote('err','Please enter a valid email address.');return;}
+      const endpoint=cform.getAttribute('data-endpoint');
+      const btn=cform.querySelector('.submit');const orig=btn.textContent;
+      if(endpoint&&/^https?:\/\//.test(endpoint)){
+        btn.disabled=true;btn.textContent='Sending…';
+        fetch(endpoint,{method:'POST',headers:{'Accept':'application/json'},body:new FormData(cform)})
+          .then(r=>{if(r.ok){cform.reset();showNote('ok',"Thanks, "+name+"! Your message has been sent — I'll get back to you soon.");}
+            else{showNote('err','Something went wrong. Please email salmanumer.dev@gmail.com directly.');}})
+          .catch(()=>showNote('err','Network error. Please email salmanumer.dev@gmail.com directly.'))
+          .finally(()=>{btn.disabled=false;btn.textContent=orig;});
+      }else{
+        // No endpoint yet — open the visitor's email app pre-filled
+        const subj=encodeURIComponent(subject?('Portfolio enquiry — '+subject):('Portfolio enquiry from '+name));
+        const body=encodeURIComponent(message+'\n\n— '+name+'\n'+email);
+        window.location.href='mailto:salmanumer.dev@gmail.com?subject='+subj+'&body='+body;
+        showNote('ok','Opening your email app… if nothing happens, email salmanumer.dev@gmail.com directly.');
+      }
+    });
+  }
 
   // current year
   document.getElementById('yr').textContent=new Date().getFullYear();
