@@ -93,12 +93,11 @@
     background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:.45}
   .nav-inner{max-width:var(--maxw);margin:0 auto;padding:15px 40px;display:flex;align-items:center;justify-content:space-between;gap:20px}
   @media(max-width:640px){.nav-inner{padding:12px 22px}}
-  .brand{display:flex;align-items:center;gap:13px;font-family:'Fraunces',serif;font-weight:600;font-size:19px;letter-spacing:.3px;color:var(--text)}
-  .brand .mono{width:40px;height:40px;border:1px solid var(--gold);border-radius:11px;display:grid;place-items:center;color:var(--gold);font-size:15px;font-weight:700;flex:none;
-    background:linear-gradient(150deg,rgba(201,169,97,.20),rgba(201,169,97,.02));
-    box-shadow:inset 0 1px 0 rgba(255,255,255,.12),0 6px 16px -10px rgba(201,169,97,.7);transition:transform .3s,box-shadow .3s}
-  .brand:hover .mono{transform:translateY(-2px) rotate(-3deg);box-shadow:0 10px 22px -8px rgba(201,169,97,.85)}
-  .brand b{color:var(--gold);font-weight:600}
+  .brand{display:flex;align-items:center;gap:12px}
+  .brand-logo{width:48px;height:48px;border-radius:13px;overflow:hidden;flex:none;background:#fff;display:block;
+    border:1px solid var(--border-soft);box-shadow:0 6px 18px -10px rgba(0,0,0,.55);transition:transform .3s,box-shadow .3s}
+  .brand-logo img{width:100%;height:100%;object-fit:cover;transform:scale(1.3);display:block}
+  .brand:hover .brand-logo{transform:translateY(-2px) rotate(-3deg);box-shadow:0 12px 24px -8px rgba(0,0,0,.5)}
   .nav ul{display:flex;list-style:none;gap:28px;font-size:14px;font-weight:500}
   .nav ul a{color:var(--text-dim);transition:color .2s;position:relative;padding:4px 0}
   .nav ul a::after{content:'';position:absolute;left:0;bottom:-2px;width:0;height:2px;border-radius:2px;background:var(--gold);transition:width .3s cubic-bezier(.2,.7,.2,1)}
@@ -384,7 +383,7 @@
 <!-- NAV -->
 <nav class="nav">
   <div class="nav-inner">
-    <a href="#top" class="brand"><span class="mono">SU</span>Salman <b>Umer</b></a>
+    <a href="#top" class="brand" aria-label="Home"><span class="brand-logo"><img src="jazzari-logo.png" alt="Jazzari"/></span></a>
     <ul>
       <li><a href="#about">About</a></li>
       <li><a href="#services">Services</a></li>
