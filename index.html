@@ -153,7 +153,10 @@
   .portrait .mono-lg{font-family:'Fraunces',serif;font-size:96px;font-weight:600;color:var(--gold);line-height:1}
   /* If a real photo is added, replace .mono-lg with: <img class="photo" src="headshot.jpg" alt="Salman Umer"/> */
   .portrait .photo{width:300px;height:300px;border-radius:50%;object-fit:cover;border:1px solid var(--line-gold);box-shadow:var(--shadow)}
-  .portrait .badge{position:absolute;bottom:8px;right:-6px;background:var(--gold);color:var(--navy);font-size:12px;font-weight:700;padding:9px 16px;border-radius:30px;letter-spacing:.3px;box-shadow:0 12px 24px -10px rgba(0,0,0,.5)}
+  .portrait .badge{position:absolute;bottom:8px;right:-6px;background:var(--gold);color:var(--navy);font-size:12px;font-weight:700;padding:9px 16px;border-radius:30px;letter-spacing:.3px;box-shadow:0 12px 24px -10px rgba(0,0,0,.5);overflow:hidden;display:inline-flex;align-items:center;gap:7px;animation:badgeBreathe 3s ease-in-out infinite}
+  .portrait .badge .bdot{width:7px;height:7px;flex:none;border-radius:50%;background:var(--navy);animation:dotPulse 1.8s ease-in-out infinite}
+  .portrait .badge::after{content:'';position:absolute;top:0;left:-150%;width:55%;height:100%;pointer-events:none;
+    background:linear-gradient(120deg,transparent,rgba(255,255,255,.6),transparent);transform:skewX(-20deg);animation:badgeShine 4s ease-in-out infinite}
   @media(max-width:900px){.portrait{order:-1}.portrait .frame,.portrait .photo{width:220px;height:220px}.portrait .mono-lg{font-size:72px}}
 
   /* stats strip */
@@ -287,6 +290,9 @@
   @keyframes auroraA{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(6%,4%) scale(1.12)}}
   @keyframes auroraB{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-5%,-4%) scale(1.15)}}
   @keyframes pulseRing{0%,100%{opacity:.35;transform:scale(1)}50%{opacity:.7;transform:scale(1.02)}}
+  @keyframes badgeShine{0%{left:-150%}55%,100%{left:150%}}
+  @keyframes dotPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.65)}}
+  @keyframes badgeBreathe{0%,100%{box-shadow:0 12px 24px -10px rgba(0,0,0,.5),0 0 0 0 rgba(201,169,97,.45)}50%{box-shadow:0 12px 24px -10px rgba(0,0,0,.5),0 0 0 7px rgba(201,169,97,0)}}
 
   /* scroll reveal */
   .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
@@ -432,7 +438,7 @@
       <div class="frame">
         <img class="photo" src="headshot.jpg" alt="Salman Umer, Tech Recruiter &amp; Business Development Specialist"/>
       </div>
-      <span class="badge">12K+ network</span>
+      <span class="badge"><span class="bdot"></span>12K+ network</span>
     </div>
   </div>
 </header>
