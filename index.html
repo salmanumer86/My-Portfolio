@@ -138,7 +138,10 @@
   .btn-gold:hover{transform:translateY(-3px);box-shadow:0 16px 30px -10px rgba(201,169,97,.55)}
   .btn-ghost{border:1px solid var(--border-soft);color:var(--text)}
   .btn-ghost:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-3px)}
-  .hero-loc{margin-top:30px;font-size:13px;color:var(--text-dim);display:flex;align-items:center;gap:9px}
+  .hero-trust{margin-top:24px;font-size:14px;color:var(--text-dim);display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  .hero-trust b{color:var(--text);font-weight:700}
+  .hero-trust .tdot{width:8px;height:8px;flex:none;border-radius:50%;background:var(--gold);box-shadow:0 0 0 4px rgba(201,169,97,.18)}
+  .hero-loc{margin-top:16px;font-size:13px;color:var(--text-dim);display:flex;align-items:center;gap:9px}
   .hero-loc .dot{width:8px;height:8px;border-radius:50%;background:#4ade80;box-shadow:0 0 0 4px rgba(74,222,128,.18)}
 
   /* portrait medallion */
@@ -306,6 +309,7 @@
   .hero-grid>div>*:nth-child(3){animation-delay:.34s}
   .hero-grid>div>*:nth-child(4){animation-delay:.46s}
   .hero-grid>div>*:nth-child(5){animation-delay:.58s}
+  .hero-grid>div>*:nth-child(6){animation-delay:.70s}
   .portrait{opacity:0;animation:fadeIn 1s ease .5s both,floatY 6s ease-in-out 1.6s infinite}
 
   /* animated aurora glow layers on hero */
@@ -421,6 +425,7 @@
         <a class="btn btn-gold" href="#contact">Let's talk hiring →</a>
         <a class="btn btn-ghost" href="#services">View what I do</a>
       </div>
+      <div class="hero-trust"><span class="tdot"></span><span><b>12,000+</b> professional connections · trusted by hiring teams</span></div>
       <div class="hero-loc"><span class="dot"></span> Based in Lahore, Pakistan · Open to collaborations worldwide</div>
     </div>
     <div class="portrait">
