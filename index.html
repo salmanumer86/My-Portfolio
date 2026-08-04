@@ -153,7 +153,8 @@
   .portrait .mono-lg{font-family:'Fraunces',serif;font-size:96px;font-weight:600;color:var(--gold);line-height:1}
   /* If a real photo is added, replace .mono-lg with: <img class="photo" src="headshot.jpg" alt="Salman Umer"/> */
   .portrait .photo{width:300px;height:300px;border-radius:50%;object-fit:cover;border:1px solid var(--line-gold);box-shadow:var(--shadow)}
-  .portrait .badge{position:absolute;bottom:8px;right:-6px;background:var(--gold);color:var(--navy);font-size:12px;font-weight:700;padding:9px 16px;border-radius:30px;letter-spacing:.3px;box-shadow:0 12px 24px -10px rgba(0,0,0,.5);overflow:hidden;display:inline-flex;align-items:center;gap:7px;animation:badgeBreathe 3s ease-in-out infinite}
+  .portrait .badge{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);z-index:2;white-space:nowrap;background:var(--gold);color:var(--navy);font-size:12px;font-weight:700;padding:9px 16px;border-radius:30px;letter-spacing:.3px;box-shadow:0 12px 24px -10px rgba(0,0,0,.55);overflow:hidden;display:inline-flex;align-items:center;gap:7px;animation:badgeBreathe 3s ease-in-out infinite}
+  @media(max-width:900px){.portrait .badge{bottom:16px}}
   .portrait .badge .bdot{width:7px;height:7px;flex:none;border-radius:50%;background:var(--navy);animation:dotPulse 1.8s ease-in-out infinite}
   .portrait .badge::after{content:'';position:absolute;top:0;left:-150%;width:55%;height:100%;pointer-events:none;
     background:linear-gradient(120deg,transparent,rgba(255,255,255,.6),transparent);transform:skewX(-20deg);animation:badgeShine 4s ease-in-out infinite}
@@ -309,13 +310,13 @@
   .stagger-grid.in>*:nth-child(6){transition-delay:.44s}
 
   /* hero entrance */
-  .hero-grid>div>*{opacity:0;animation:fadeUp .9s cubic-bezier(.2,.7,.2,1) both}
-  .hero-grid>div>*:nth-child(1){animation-delay:.10s}
-  .hero-grid>div>*:nth-child(2){animation-delay:.22s}
-  .hero-grid>div>*:nth-child(3){animation-delay:.34s}
-  .hero-grid>div>*:nth-child(4){animation-delay:.46s}
-  .hero-grid>div>*:nth-child(5){animation-delay:.58s}
-  .hero-grid>div>*:nth-child(6){animation-delay:.70s}
+  .hero-copy>*{opacity:0;animation:fadeUp .9s cubic-bezier(.2,.7,.2,1) both}
+  .hero-copy>*:nth-child(1){animation-delay:.10s}
+  .hero-copy>*:nth-child(2){animation-delay:.22s}
+  .hero-copy>*:nth-child(3){animation-delay:.34s}
+  .hero-copy>*:nth-child(4){animation-delay:.46s}
+  .hero-copy>*:nth-child(5){animation-delay:.58s}
+  .hero-copy>*:nth-child(6){animation-delay:.70s}
   .portrait{opacity:0;animation:fadeIn 1s ease .5s both,floatY 6s ease-in-out 1.6s infinite}
 
   /* animated aurora glow layers on hero */
@@ -373,7 +374,7 @@
   @media (prefers-reduced-motion: reduce){
     *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
     html{scroll-behavior:auto}
-    .reveal,.stagger-grid>*,.hero-grid>div>*,.portrait,.stats .stat{opacity:1 !important;transform:none !important}
+    .reveal,.stagger-grid>*,.hero-copy>*,.portrait,.stats .stat{opacity:1 !important;transform:none !important}
     h1.hero-title .gold,.contact h2 .gold{-webkit-text-fill-color:var(--gold);color:var(--gold)}
   }
 </style>
@@ -423,7 +424,7 @@
 <!-- HERO -->
 <header class="hero">
   <div class="wrap hero-grid">
-    <div>
+    <div class="hero-copy">
       <span class="eyebrow">Tech Recruiter · Business Development</span>
       <h1 class="hero-title">Connecting companies with the <span class="gold">right</span> engineering talent.</h1>
       <p class="hero-sub">I help startups and growing companies hire skilled software engineers faster, and I guide developers toward the roles where they'll do their best work. A recruiter who actually understands code.</p>
