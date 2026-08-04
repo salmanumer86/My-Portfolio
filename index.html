@@ -655,9 +655,11 @@
       </div>
     </div>
 
-    <!-- To receive messages: create a form endpoint (Formspree / Web3Forms),
-         then paste the URL into data-endpoint below. Until then, submits open the visitor's email app. -->
-    <form class="contact-form" id="contactForm" data-endpoint="" novalidate>
+    <!-- Submissions post to Web3Forms and are delivered to salmanumer.dev@gmail.com -->
+    <form class="contact-form" id="contactForm" data-endpoint="https://api.web3forms.com/submit" novalidate>
+      <input type="hidden" name="access_key" value="27cb64ef-4997-4380-b0a0-704217ca4676"/>
+      <input type="hidden" name="subject" value="New portfolio enquiry from your website"/>
+      <input type="hidden" name="from_name" value="Salman Umer Portfolio"/>
       <div class="form-row">
         <div class="field">
           <label for="cf_name">Your name</label>
@@ -669,8 +671,8 @@
         </div>
       </div>
       <div class="field">
-        <label for="cf_subject">Company / subject <span class="opt">(optional)</span></label>
-        <input type="text" id="cf_subject" name="subject" placeholder="Hiring React developers"/>
+        <label for="cf_company">Company / topic <span class="opt">(optional)</span></label>
+        <input type="text" id="cf_company" name="company" placeholder="Hiring React developers"/>
       </div>
       <div class="field">
         <label for="cf_message">Message</label>
@@ -764,7 +766,7 @@
       const name=document.getElementById('cf_name').value.trim();
       const email=document.getElementById('cf_email').value.trim();
       const message=document.getElementById('cf_message').value.trim();
-      const subject=document.getElementById('cf_subject').value.trim();
+      const company=document.getElementById('cf_company').value.trim();
       if(!name||!email||!message){showNote('err','Please fill in your name, email, and message.');return;}
       if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){showNote('err','Please enter a valid email address.');return;}
       const endpoint=cform.getAttribute('data-endpoint');
@@ -778,7 +780,7 @@
           .finally(()=>{btn.disabled=false;btn.textContent=orig;});
       }else{
         // No endpoint yet — open the visitor's email app pre-filled
-        const subj=encodeURIComponent(subject?('Portfolio enquiry — '+subject):('Portfolio enquiry from '+name));
+        const subj=encodeURIComponent(company?('Portfolio enquiry — '+company):('Portfolio enquiry from '+name));
         const body=encodeURIComponent(message+'\n\n— '+name+'\n'+email);
         window.location.href='mailto:salmanumer.dev@gmail.com?subject='+subj+'&body='+body;
         showNote('ok','Opening your email app… if nothing happens, email salmanumer.dev@gmail.com directly.');
