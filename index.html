@@ -153,8 +153,9 @@
   .portrait .mono-lg{font-family:'Fraunces',serif;font-size:96px;font-weight:600;color:var(--gold);line-height:1}
   /* If a real photo is added, replace .mono-lg with: <img class="photo" src="headshot.jpg" alt="Salman Umer"/> */
   .portrait .photo{width:300px;height:300px;border-radius:50%;object-fit:cover;border:1px solid var(--line-gold);box-shadow:var(--shadow)}
-  .portrait .badge{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);z-index:2;white-space:nowrap;background:var(--gold);color:var(--navy);font-size:12px;font-weight:700;padding:9px 16px;border-radius:30px;letter-spacing:.3px;box-shadow:0 12px 24px -10px rgba(0,0,0,.55);overflow:hidden;display:inline-flex;align-items:center;gap:7px;animation:badgeBreathe 3s ease-in-out infinite}
-  @media(max-width:900px){.portrait .badge{bottom:16px}}
+  .portrait .badge{position:absolute;bottom:14px;right:-8px;z-index:2;white-space:nowrap;background:var(--gold);color:var(--navy);font-size:12px;font-weight:700;padding:9px 16px;border-radius:30px;letter-spacing:.3px;box-shadow:0 12px 24px -10px rgba(0,0,0,.55);overflow:hidden;display:inline-flex;align-items:center;gap:7px;animation:badgeBreathe 3s ease-in-out infinite}
+  .portrait .badge .grow{font-weight:600;font-style:italic;font-size:11px;opacity:.72;margin-left:1px}
+  @media(max-width:900px){.portrait .badge{bottom:8px;right:0}}
   .portrait .badge .bdot{width:7px;height:7px;flex:none;border-radius:50%;background:var(--navy);animation:dotPulse 1.8s ease-in-out infinite}
   .portrait .badge::after{content:'';position:absolute;top:0;left:-150%;width:55%;height:100%;pointer-events:none;
     background:linear-gradient(120deg,transparent,rgba(255,255,255,.6),transparent);transform:skewX(-20deg);animation:badgeShine 4s ease-in-out infinite}
@@ -464,7 +465,7 @@
       <div class="frame">
         <img class="photo" src="headshot.jpg" alt="Salman Umer, Tech Recruiter &amp; Business Development Specialist"/>
       </div>
-      <span class="badge"><span class="bdot"></span>12K+ network</span>
+      <span class="badge"><span class="bdot"></span>12K+ network <em class="grow">&amp; growing</em></span>
     </div>
   </div>
 </header>
